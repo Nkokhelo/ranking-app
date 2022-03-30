@@ -1,0 +1,3 @@
+{
+  "jest.jestCommandLine": "yarn jest --config jest.config.js"
+}

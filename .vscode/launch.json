@@ -1,0 +1,52 @@
+{
+  "configurations": [
+  
+  {
+    "name": "Launch Program",
+    "program": "${workspaceFolder}/src/main.ts",
+    "request": "launch",
+    "runtimeExecutable": "ts-node",
+    "skipFiles": [
+      "<node_internals>/**"
+    ],
+    "type": "pwa-node",
+    "args": [
+      "ts-node",
+      "--text",
+      "\"Lions 3, Snakes 3\\nTarantulas 1, FC Awesome 0\\nLions 1, FC Awesome 1\\nTarantulas 3, Snakes 1\\nLions 4, Grouches 0\""
+    ]
+  },
+  {
+    "name": "Launch Program (File)",
+    "program": "${workspaceFolder}/src/main.ts",
+    "request": "launch",
+    "runtimeExecutable": "ts-node",
+    "skipFiles": [
+      "<node_internals>/**"
+    ],
+    "type": "pwa-node",
+    "args": [
+      "ts-node",
+      "--file",
+      "src/matches.txt"
+    ]
+  },
+    {
+      "type": "node",
+      "name": "vscode-jest-tests",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "yarn",
+      "args": [
+        "jest",
+        "--config",
+        "jest.config.js",
+        "--runInBand",
+        "--watchAll=false"
+      ]
+    }
+  ]
+}
