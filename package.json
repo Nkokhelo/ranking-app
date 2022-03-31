@@ -2,12 +2,12 @@
   "name": "ranking-app",
   "version": "1.0.0",
   "description": "Command-line application that calculate the ranking table for a league",
-  "main": "src/index.ts",
+  "main": "build/main.js",
   "scripts": {
     "test": "yarn jest --config jest.config.js",
-    "lint": "yarn lint:types && yarn lint:ci",
-    "lint:types": "yarn tsc --noEmit -p .",
-    "lint:ci": "eslint . --ext .tsx,.ts"
+    "build": "tsc",
+    "install-global": "npm i -g .",
+    "install-app": "npm i ."
   },
   "author": "Nkokhelo Tembe",
   "license": "ISC",
@@ -26,5 +26,8 @@
   "dependencies": {
     "ts-node": "^10.7.0",
     "yargs": "^17.4.0"
+  },
+  "bin": {
+    "ranking-app": "build/main.js"
   }
 }

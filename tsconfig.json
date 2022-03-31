@@ -11,7 +11,8 @@
     "strictNullChecks": false,
     "useUnknownInCatchVariables": true
   },
-  "include": [
-    "setup.ts"
+  "exclude": [
+    "setup.ts",
+    "**/tests/**.ts"
   ]
 }
