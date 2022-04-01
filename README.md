@@ -1,6 +1,6 @@
 # RANKING APP
 
-Command-line application that will calculate the ranking table for a league.
+Command-line application that will calculate the ranking table for a league. This document assumes have you `nodejs` and `typescirpt` installed on you machine
 
 ## 1. Steps to setup the program
 
