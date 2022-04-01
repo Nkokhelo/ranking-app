@@ -36,9 +36,13 @@ export class League {
 
     const splitReg = /\r/.test(matchesInput)? '\r\n': /\n/.test(matchesInput)? '\n' : '\\n';
     const matches = matchesInput.trim().split(splitReg)
-      .map((match) =>
-        match.trim().split(", ")
+      .map((match) => {
+        if(/^([A-Za-z\s]+\d+)$/.test(match))
+          throw 'Invalid input';
+
+        return match.trim().split(", ")
           .map((teamInput) => {
+
             const teamData = teamInput;
             const team = {
               name: teamData.match(/\D*/)[0].trim(),
@@ -46,6 +50,7 @@ export class League {
             };
             return team;
           })
+      }
       );
     return matches;
   }

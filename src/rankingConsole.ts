@@ -7,6 +7,8 @@ export class RankingConsole {
 
   public runTextCmd(text: string) {
     try {
+      if(text == '') 
+        throw 'Your text is empty';    
       const league = new League();
       console.log(league.displayLeaguePoints(text));
     } catch (e) {
